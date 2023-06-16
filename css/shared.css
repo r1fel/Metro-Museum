@@ -1,0 +1,95 @@
+html {
+  --prim-col-500: #f3ef37;
+  --prim-col-trans-500: #f3f0376d;
+  --sec-col-300: #0077d2;
+  --bright-col-500: #eaf0f2;
+  --dark-col-500: #1f1f1f;
+  --dark-opac-500: #1d1f31d7;
+  --glass-500: #2f394244;
+}
+
+body {
+  font-family: 'Orbit', sans-serif;
+  background-color: var(--dark-col-500);
+}
+
+
+a {
+  text-decoration: none;
+}
+
+#nav-bar {
+  z-index: 10;
+  position: fixed;
+  display: flex;
+  height: 5rem;
+  width: 100%;
+  top: 0;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--dark-opac-500);
+  padding: 0 1rem;
+}
+
+#nav-item-section {
+  display: flex;
+  align-items: baseline;
+}
+
+.nav-item {
+  margin: 2rem;
+  color: var(--prim-col-500);
+  padding-bottom: 3px;
+  border-bottom: 3px solid transparent;
+  transition: 0.2s;
+}
+
+.nav-item:hover {
+  border-bottom: 3px solid var(--prim-col-500);
+
+}
+
+.highlight {
+  padding: 1rem;
+  border-left: 3px solid var(--prim-col-500) ;
+  border-top: 3px solid var(--prim-col-500) ;
+  border-right: 3px solid var(--prim-col-500) ;
+}
+
+#logo {
+  height: 3.5rem;
+  aspect-ratio: 1/1;
+  border-radius: 0.5rem;
+}
+
+h1 { 
+  font-size: 3.5rem;
+  margin: 2rem 0;
+  color: var(--prim-col-500);
+}
+
+
+h2 {
+  color: var(--prim-col-500);
+  font-size: 1.2rem;
+  padding-bottom: 0.5rem;
+}
+
+p {
+  color: var(--bright-col-500);
+  font: 200 0.8rem 'Poppins', sans-serif;
+}
+
+.btn {
+  margin: 2rem 1rem 1rem 1rem;
+  padding: 0.7rem 1.5rem;
+  background-color: var(--bright-col-500);
+  border: none;
+  font: 1rem 'Orbit', sans-serif;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  background-color: var(--prim-col-500);
+  box-shadow: 0 0 20px var(--prim-col-trans-500);
+}
