@@ -6,6 +6,10 @@ html {
   --dark-col-500: #1f1f1f;
   --dark-opac-500: #1d1f31d7;
   --glass-500: #2f394244;
+  --error-300: #f0b5a5;
+  --error-500: #ff6035;
+  --success-300: #90f6cd;
+  --success-500: #0fdf8c;
 }
 
 body {
@@ -86,10 +90,31 @@ p {
   background-color: var(--bright-col-500);
   border: none;
   font: 1rem 'Orbit', sans-serif;
+  cursor: pointer;
   transition: 0.2s;
 }
 
 .btn:hover {
   background-color: var(--prim-col-500);
   box-shadow: 0 0 20px var(--prim-col-trans-500);
+}
+
+.error-message {
+
+color: var(--error-500);
+
+}
+
+.success {
+  color: var(--success-500) ;
+  background-color: var(--success-300);
+  border: 1px solid var(--success-500) ;
+
+}
+
+.error {
+  color: var(--error-500) ;
+  background-color: var(--error-300);
+  border: 1px solid var(--error-500) ;
+
 }

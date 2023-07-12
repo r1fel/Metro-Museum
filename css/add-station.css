@@ -55,10 +55,8 @@ textarea:hover {
   background-color: var(--bright-col-500);
 }
 
-#image-input {
-  color: var(--bright-col-500);
+.error-message {
+  display: none;
+  color: var(--error-500);
 }
 
-#image-input:hover {
-  background-color: inherit;
-}

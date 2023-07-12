@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/shared.css" />
     <link rel="stylesheet" href="css/add-station.css" />
+    <script src="scripts/newStation.js" defer></script>
   </head>
   <body>
     <header>
@@ -32,27 +33,31 @@
       <div id="background-image"></div>
       <div id="wrapper">
         <h1 id="hero-text">Add a Metro Station</h1>
-        <form action="/submit" method="GET" id="add-station-form">
+        <form action="index.html" method="GET" id="add-station-form">
           <div id="input-grid">
-            <label for="station-name-input" class="form-label">Station Name</label>
+            <label for="station-name-input" class="form-label">Name</label>
             <input
               type="text"
               name="station-name"
               id="station-name-input"
-              minlength="3"
-              maxlength="35"
               placeholder="Times Square Station"
-              required
               class="form-input"
             />
+            <p class="error-message">Description is required</p>
           
-            <label for="description-input" class="form-label">Station Description</label>
+            <label for="description-input" class="form-label">Description</label>
             <textarea class="form-input" name="station-description" id="description-input" cols="20" rows="4" placeholder="The Times Square–42nd Street station is a major New York City Subway station,served by the 1, 2, 3, 7, N and Q trains at all times."></textarea>
-          
-            <label for="construction-date-input" class="form-label">Date of Construction</label>
-            <input type="date" id="construction-date-input" class="form-input" name="construction-date" value="2000-01-01" min="1870-01-01">
-            <label for="image-input">Station Photo</label>
-            <input type="file" accept=".jpg, .jpeg .png" id="image-input" name="image">
+            <p class="error-message"></p>
+
+            <label for="image-input">Photo</label>
+            <input type="URL"  id="image-input" name="image-URL" placeholder="https://example.com/example-img.jpg"
+            >
+            <p class="error-message"></p>
+
+            <label for="website-input">Wikipedia Page</label>
+            <input type="URL"  id="website-input" name="website-URL" placeholder="https://wikipedia.com/metro"
+            >
+            <p class="error-message"></p>
         </div>  
 
         <button type="submit" class="btn">Add Station</button>

@@ -1,10 +1,28 @@
+<!-- Why do you have index.html file in your 'images' dir? -->
+<!-- What sources.html file serves for? -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+
+  <!-- Not necessary to use http-equiv="X-UA-Compatible" content="IE=edge", unless you have 
+  specific requirements or you need to support legacy versions of Internet Explorer. 
+  Today, most modern browsers (including the latest versions of Internet Explorer, too) 
+  have better support for web standards and are more consistent in their rendering. 
+  The http-equiv="X-UA-Compatible" content="IE=edge" attributes were made in earlier days
+  as a 'workaround' to fix the incompatibility and rendering issues which IE famously had :))
+  -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MMS</title>
+  
+  <!-- You should use rel="preconnect" only when you know that your web page will need to 
+  establish a connection to a specific origin, such as when you have external resources 
+  (e.g., CSS, JavaScript, images...) hosted on a different domain. Also, modern browsers
+  already have some ways of optimizing connections automatically :) In the future, if your
+  company that you work with has made some analysis on your website's performance needs and
+  concluded that the app needs some improvement, you might consider using rel="preconnect"
+  -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Orbit&family=Poppins:wght@100;200&display=swap" rel="stylesheet">
@@ -12,6 +30,7 @@
   <link rel="stylesheet" href="css/shared.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <script src="app.js" defer></script>
 </head>
 <body>
   <header>
@@ -145,9 +164,9 @@
         </li>
 
       </ul>
-
+      <button id="remove-stations" class="btn">Remove all added Stations</button>
     </section>
-
+    
   </main>
 
 </body>
