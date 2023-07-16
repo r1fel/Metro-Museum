@@ -1,3 +1,7 @@
+body {
+  text-align: center;
+}
+
 main {
   height: 100vh;
   display: flex;
@@ -8,4 +12,54 @@ main {
 
 main p {
   font-size: 1.5rem;
+}
+
+#background-image {
+  background-image: url('../images/add-station-a.jpg');
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+  filter: brightness(0.4);
+  z-index: -1;
+}
+
+#wrapper {
+  padding: 2rem 4rem;
+  margin: 2rem;
+  background-color: var(--glass-500);
+  backdrop-filter: blur(6px);
+}
+
+#input-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem;
+}
+
+label {
+  color: var(--bright-col-500);
+  font: 200 1.2rem 'Poppins', sans-serif;
+  justify-self: end;
+}
+
+input {
+  font: 200 0.8rem 'Poppins', sans-serif;
+}
+
+input:hover {
+  background-color: var(--bright-col-500);
+}
+
+textarea {
+  font: 200 0.8rem 'Poppins', sans-serif;
+}
+
+textarea:hover {
+  background-color: var(--bright-col-500);
+}
+
+.error-message {
+  display: none;
+  color: var(--error-500);
 }

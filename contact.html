@@ -29,8 +29,39 @@
     </nav>
   </header>
   <main>
-    <h1>Contact</h1>
-    <p>Contact Us!</p>
+    <div id="background-image"></div>
+    <div id="wrapper">
+      <h1 id="hero-text">Contact Us!</h1>
+      <p>You have questions about the individual stations?<br>
+        You want to add a station but you are not sure?<br>
+        Or do you want to work with us?<br>
+        Then contact us and we will contact you!</p><br>
+      <form action="" method="GET" id="contact-form">
+        <div id="input-grid">
+          <label for="first-name-input" class="form-label">First Name</label>
+          <input type="text" name="first-name" id="first-name-input" placeholder="Julia" class="form-input" />
+          <p class="error-message"></p>
+
+          <label for="last-name-input" class="form-label">Last Name</label>
+          <input type="text" name="last-name" id="last-name-input" placeholder="Williams"></input>
+          <p class="error-message"></p>
+
+          <label for="email-input">E-Mail</label>
+          <input type="E-Mail" id="email-input" name="email" placeholder="julia.williams@hotmail.com" />
+          <p class="error-message"></p>
+
+          <label for="phonenumber-input">Phone Number</label>
+          <input type="text" id="phonenumber-input" name="phonenumber" placeholder="+44 (0) 18302862">
+          <p class="error-message"></p>
+
+          <label for="country-input">Country</label>
+          <input type="text" id="country-input" name="country" placeholder="England">
+          <p class="error-message"></p>
+
+        </div>
+        <button type="submit" class="btn">Send!</button>
+      </form>
+    </div>
   </main>
 
 
