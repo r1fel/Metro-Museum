@@ -80,6 +80,7 @@ const validateInputs = () => {
     //     setSuccess(phonenumber);
     // }
 
+
     if (countryValue === '') {
         setError(country, 'Country ist required');
     } else {
