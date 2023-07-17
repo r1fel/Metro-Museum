@@ -59,7 +59,15 @@ textarea:hover {
   background-color: var(--bright-col-500);
 }
 
-.error-message {
+.error {
   display: none;
   color: var(--error-500);
+}
+
+.contact.success input {
+  border-color: #458412
+}
+
+.contact.error input {
+  border-color: #e33333
 }
