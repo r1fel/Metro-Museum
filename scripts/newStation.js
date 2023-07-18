@@ -9,7 +9,7 @@ let station = {
   name: '',
   description: '',
   imgUrl: '',
-  websiteUrl:'',
+  websiteUrl: '',
 }
 
 let isVerified = true
@@ -25,7 +25,7 @@ const addLocalInfo = () => {
 
 
 const createHtml = (input) => {
-  const element =  document.createElement('template')
+  const element = document.createElement('template')
   element.innerHTML = input.trim()
   return element.innerHTML
 }
@@ -91,13 +91,13 @@ const validateAll = () => {
 
 
 
-form.addEventListener('submit', function(e) {
+form.addEventListener('submit', function (e) {
   e.preventDefault()
   addLocalInfo()
   // validateAll()
   // if(isVerified){
 
-    const createdElement = createHtml(`
+  const createdElement = createHtml(`
       <li class="content-card" id="added-station-${station.name}>
         <a href=${station.websiteUrl} target="_blank">
           <div class="card-img-wrapper">
@@ -110,10 +110,10 @@ form.addEventListener('submit', function(e) {
         </a>
       </li>
     `)
-  
-    const savedElement = localStorage.setItem (`new-list-item-${localStorage.length}`, createdElement)
-    window.location.href = `index.html#added-station-${station.name}`
-  
+
+  const savedElement = localStorage.setItem(`new-list-item-${localStorage.length}`, createdElement)
+  window.location.href = `index.html#added-station-${station.name}`
+
 })
 
 

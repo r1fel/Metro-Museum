@@ -55,9 +55,9 @@ a {
 
 .highlight {
   padding: 1rem;
-  border-left: 3px solid var(--prim-col-500) ;
-  border-top: 3px solid var(--prim-col-500) ;
-  border-right: 3px solid var(--prim-col-500) ;
+  border-left: 3px solid var(--prim-col-500);
+  border-top: 3px solid var(--prim-col-500);
+  border-right: 3px solid var(--prim-col-500);
 }
 
 #logo {
@@ -66,7 +66,7 @@ a {
   border-radius: 0.5rem;
 }
 
-h1 { 
+h1 {
   font-size: 3.5rem;
   margin: 2rem 0;
   color: var(--prim-col-500);
@@ -101,20 +101,20 @@ p {
 
 .error-message {
 
-color: var(--error-500);
+  color: var(--error-500);
 
 }
 
 .success {
-  color: var(--success-500) ;
+  color: var(--success-500);
   background-color: var(--success-300);
-  border: 1px solid var(--success-500) ;
+  border: 1px solid var(--success-500);
 
 }
 
 .error {
-  color: var(--error-500) ;
+  color: var(--error-500);
   background-color: var(--error-300);
-  border: 1px solid var(--error-500) ;
+  border: 1px solid var(--error-500);
 
 }

@@ -1,32 +1,35 @@
-const contact = document.getElementById('contact');
+
 const firstname = document.getElementById('firstname');
 const lastname = document.getElementById('lastname');
 const email = document.getElementById('email');
 const phonenumber = document.getElementById('phonenumber');
 const country = document.getElementById('country');
 
-contact.addEventListener('submit', e => {
-    e.preventDefault();
-
-    validateInputs();
+document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('contact').addEventListener('submit', function (e) {
+        e.preventDefault();
+        validateInputs();
+    });
 });
 
 const setError = (element, message) => {
     const contact = element.parentElement;
-    const errorDisplay = contact.querySelector('.error');
+    const errorDisplay = contact.querySelector('.error-message');
 
     errorDisplay.innerText = message;
-    contact.classList.add('error');
-    contact.classList.remove('success');
+    contact.classList.add('error-message');
+    contact.classList.add('invalid');
+    contact.classList.remove('valid');
 }
 
 const setSuccess = element => {
     const contact = element.parentElement;
-    const errorDisplay = contact.querySelector('.error');
+    const errorDisplay = contact.querySelector('.error-message');
 
     errorDisplay.innerText = '';
-    contact.classList.add('success');
-    contact.classList.remove('error');
+    contact.classList.add('valid');
+    contact.classList.remove('error-message');
+    contact.classList.remove('invalid');
 };
 
 const isValidEmail = email => {
@@ -34,10 +37,10 @@ const isValidEmail = email => {
     return re.test(String(email).toLowerCase());
 }
 
-// const isValidPhonenumber = phonenumber => {
-//     const re = [0 - 9];
-//     return re.text(String(phonenumber));
-// }
+const isValidPhonenumber = phonenumber => {
+    const re = /^\+{0,1}[0-9]{8,17}$/gm;
+    return re.test(String(phonenumber));
+}
 
 const validateInputs = () => {
     const firstnameValue = firstname.value.trim();
@@ -55,7 +58,7 @@ const validateInputs = () => {
     if (lastnameValue === '') {
         setError(lastname, 'Last Name is required');
     } else {
-        setSuccess(lasttname);
+        setSuccess(lastname);
     }
 
     if (emailValue === '') {
@@ -67,29 +70,25 @@ const validateInputs = () => {
     }
 
     if (phonenumberValue === '') {
-        setError(phonenumber, 'Phone number ist required');
+        setError(phonenumber, 'Phone Number ist required');
     } else {
         setSuccess(phonenumber);
     }
 
-    // if (phonenumberValue === '') {
-    //     setError(phonenumber, 'Phone number is required');
-    // } else if (!isValidPhonenumber(phonenumberValue)) {
-    //     setError(Phonenumber, 'Provide a valid phone number');
-    // } else {
-    //     setSuccess(phonenumber);
-    // }
-
+    if (phonenumberValue === '') {
+        setError(phonenumber, 'Phone Number is required');
+    } else if (!isValidPhonenumber(phonenumberValue)) {
+        setError(phonenumber, 'Provide a valid phone number');
+    } else {
+        setSuccess(phonenumber);
+    }
 
     if (countryValue === '') {
-        setError(country, 'Country ist required');
+        setError(country, 'Country is required');
     } else {
         setSuccess(country);
     }
 };
-
-
-
 
 
 
