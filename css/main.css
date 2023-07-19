@@ -39,23 +39,28 @@
 }
 
 
-#stations-list {
+/* #stations-list {
   --auto-grid-min-size: 22rem;
   
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
   grid-gap: 1rem;
+} */
+
+
+#stations-list {
+  columns: 4 15rem;
+  column-gap: 1.5rem;
+  /* fake masonry, wrong indexing */
 }
 
-
-
-
-
 .content-card {
-  min-width: 18rem;
-  max-width: 24rem;
+  /* min-width: 18rem;
+  max-width: 24rem; */
+  break-inside: avoid;
   height: auto;
   padding: 1.2rem;
+  margin-bottom: 1.5rem;
   color: var(--bright-col-500);
   background-color: var(--dark-opac-500);
   backdrop-filter: blur(10px);
@@ -73,12 +78,14 @@
 }
 
 .card-img-wrapper{
-  height: 60%;
+  /* height: 60%; */
   display: flex;
   justify-content: center;
   margin: auto;
   padding-bottom: 1rem;
 }
+
+
 
 .station-img{
   width: 100%;

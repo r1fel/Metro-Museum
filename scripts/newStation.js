@@ -21,8 +21,6 @@ const addLocalInfo = () => {
   station.websiteUrl = stationWebsiteInput.value.trim()
 }
 
-// MAKE THIS AN ASYNC REQUEST
-
 
 const createHtml = (input) => {
   const element =  document.createElement('template')
@@ -32,15 +30,16 @@ const createHtml = (input) => {
 
 
 
-/* const isValidTextInput = (input, message) => {
+
+
+const isValidTextInput = (input, message) => {
   const errMess = input.parentElement.querySelector('.error-message')
   if (input.value.length > 3) {
-    input.classList.add('success')
     input.classList.remove('error')
     errMess = ''
+    isVerified = true
   } else {
     input.classList.add('error')
-    input.classList.remove('success')
     const errMess = input.parentElement.querySelector('.error-message')
     errMess.innerText = message
     isVerified = false
@@ -48,7 +47,7 @@ const createHtml = (input) => {
 
 }
 
-const isValidPhotoUrl = (input, message) => {
+/* const isValidPhotoUrl = (input, message) => {
   const re = new RegExp(/^https:\/\/.*\.(png|jpe?g|gif|webp)$/i)
   if(re.test(input)) {
     input.classList.add('success')
@@ -98,7 +97,7 @@ form.addEventListener('submit', function(e) {
   // if(isVerified){
 
     const createdElement = createHtml(`
-      <li class="content-card" id="added-station-${station.name}>
+      <li class="content-card" id="added-station-${station.name}">
         <a href=${station.websiteUrl} target="_blank">
           <div class="card-img-wrapper">
             <img class="station-img" src="${station.imgUrl}" alt="Metro Station ${station.name}">
